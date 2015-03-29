@@ -6,6 +6,8 @@
 #include <string>
 
 #include "caffe/proto/caffe.pb.h"
+#include "caffe/proto/caffe_pretty_print.pb.h"
+
 //#include "caffe/proto/caffe_pretty_print.pb.h"
 
 using std::string;
@@ -35,8 +37,8 @@ LayerParameter_LayerType UpgradeV0LayerType(const string& type);
 
 // Convert a NetParameter to NetParameterPrettyPrint used for dumping to
 // proto text files.
-//void NetParameterToPrettyPrint(const NetParameter& param,
-//                               NetParameterPrettyPrint* pretty_param);
+void NetParameterToPrettyPrint(const NetParameter& param,
+                               NetParameterPrettyPrint* pretty_param);
 
 // Read parameters from a file into a NetParameter proto message.
 void ReadNetParamsFromTextFileOrDie(const string& param_file,
