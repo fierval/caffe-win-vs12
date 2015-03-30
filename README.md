@@ -27,13 +27,12 @@ Currently it can be built by VS2013 for x64 platform only. This is because the d
 - Switch build target to x64 platform Release.
 - Build the code and you may find the `./bin/MainCaller.exe`
 
-#### Train MNIST dataset
+#### Validating the Build on MNIST dataset
 - Suppose you choose to build train_net.cpp which is the default one in MainCaller.cpp
 - If you do not have GPU, please change it to CPU in `lenet_solver.prototxt`
-- Add cudnn64_65.dll to `./bin/`
-- Goto directory `./examples/mnist`
-- Double click `get_mnist_leveldb.bat` to download the dataset in leveldb format.(ignore)
-- Double click `train_lenet.bat` to see the training progress .
+- Start command prompt in `./examples/mnist`
+- Run `get_mnist_leveldb.bat` to download the dataset in leveldb format.(ignore)
+- Run `train_lenet.bat` to see the training progress .
 
 #### Tips
 - It takes obvious longer time when you compile for the first time. Therefore please refrain from using `clean & rebuild`.
