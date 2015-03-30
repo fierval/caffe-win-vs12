@@ -18,6 +18,12 @@ $RECYCLE.BIN/
 *.idb
 *.pdb
 *.exe
+*.dep
+*.sst
+LOG
+LOCK
+CURRENT
+MANIFEST-*
 
 # =========================
 # Operating System Files

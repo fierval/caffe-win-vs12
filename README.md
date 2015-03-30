@@ -1,3 +1,6 @@
+# Source
+This is an extension of Niu Zhiheng's [work](https://github.com/niuzhiheng/caffe) on Caffe Windows installation.
+
 # Windows Installation
 This is not the original [Caffe Readme](https://github.com/BVLC/caffe/blob/master/README.md) but an installation guide for windows version.
 
@@ -7,17 +10,21 @@ You can download the windows x64 [standalone package](https://dl.dropboxusercont
 #### Prerequisites
 You may need the followings to build the code:
 - Windows 64-bit
-- MS Visual Studio 2012
-- CUDA toolkit 6.5
-- Other dependencies which you can directly download from [here](https://www.dropbox.com/s/121o1so5hj8zz64/3rdparty.rar?dl=0).
+- [Boost] (http://sourceforge.net/projects/boost/files/boost-binaries/) 
+- [cuDNN] (https://developer.nvidia.com/cuDNN)
+- MS Visual Studio 2013
+- CUDA toolkit 7.0
+- Other dependencies which you can directly download from [here](https://dl.dropboxusercontent.com/u/1308750/3rdparty.zip).
+- BOOST_ROOT environment variable to point at the Boost installation directory
+- CUDNN_ROOT environment variable to point at the cuDNN installation directory
 
 #### Build Steps
-Currently it can be built by VS2012 for x64 flatform only. This is because the dependencies mentioned above is cross-compiled to support x64 only. If you want to build on 32bit windows, you need to rebuild your own 3rd-party libraries.
-- Check out the code and switch to *windows* branch
-- Download the dependency file and extract the folders inside to project root directory.
-- Include any .cpp you want to build in the `./tools` directory to MainCaller.cpp.
+Currently it can be built by VS2013 for x64 platform only. This is because the dependencies mentioned above is cross-compiled to support x64 only. If you want to build on 32bit windows, you need to rebuild your own 3rd-party libraries.
+- Check out the code 
+- Download the [dependency file](https://dl.dropboxusercontent.com/u/1308750/3rdparty.zip) and extract the folders inside to project root directory.
+- Include any .cpp you want to build in the `./tools` directory in the project build
 - Open the solution file in `./build/MSVC`
-- Switch build target to x64 platform (ONLY release mode is OK).
+- Switch build target to x64 platform Release.
 - Build the code and you may find the `./bin/MainCaller.exe`
 
 #### Train MNIST dataset
@@ -27,9 +34,6 @@ Currently it can be built by VS2012 for x64 flatform only. This is because the d
 - Goto directory `./examples/mnist`
 - Double click `get_mnist_leveldb.bat` to download the dataset in leveldb format.(ignore)
 - Double click `train_lenet.bat` to see the training progress .
-
-#### Performance
-- I have trained mnist on K40 with this windows version, take 40 seconds. The original windows-caffe taken about 5 minutes to train mnist. 
 
 #### Tips
 - It takes obvious longer time when you compile for the first time. Therefore please refrain from using `clean & rebuild`.
@@ -47,4 +51,4 @@ Currently it can be built by VS2012 for x64 flatform only. This is because the d
 
 Please let me know if you found issues.
 
-Thanks @happynear and NIU ZHIHENG (https://github.com/niuzhiheng/caffe) for contribution caffe on windows.
+Thanks @happynear and NIU ZHIHENG (https://github.com/niuzhiheng/caffe) for their contributions to caffe on windows.
