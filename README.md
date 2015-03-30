@@ -10,8 +10,8 @@ You can download the windows x64 [standalone package](https://dl.dropboxusercont
 #### Prerequisites
 You may need the followings to build the code:
 - Windows 64-bit
-- [Boost] (http://sourceforge.net/projects/boost/files/boost-binaries/) 
-- [cuDNN] (https://developer.nvidia.com/cuDNN)
+- [Boost] (http://sourceforge.net/projects/boost/files/boost-binaries/) >= 1.55 
+- [cuDNN] (https://developer.nvidia.com/cuDNN) v 2
 - MS Visual Studio 2013
 - CUDA toolkit 7.0
 - Other dependencies which you can directly download from [here](https://dl.dropboxusercontent.com/u/1308750/3rdparty.zip).
